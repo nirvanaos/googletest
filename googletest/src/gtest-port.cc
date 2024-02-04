@@ -509,7 +509,7 @@ class ThreadLocalRegistryImpl {
           thread_to_thread_locals
               ->insert(std::make_pair(current_thread, ThreadLocalValues()))
               .first;
-      StartWatcherThreadFor(current_thread);
+      // Remove in Nirvana: StartWatcherThreadFor(current_thread);
     }
     ThreadLocalValues& thread_local_values = thread_local_pos->second;
     ThreadLocalValues::iterator value_pos =
